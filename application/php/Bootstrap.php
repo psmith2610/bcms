@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework;
+namespace Application;
 
-require 'framework/php/ClassLoader.php';
+require 'application/php/ClassLoader.php';
 
 /**
  * Singleton instance of the framework boostrap code

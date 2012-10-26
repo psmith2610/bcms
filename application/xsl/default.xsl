@@ -3,10 +3,10 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>Hello World</title>
+				<title><xsl:value-of select="/page/head/title"/></title>
 			</head>
 			<body>
-				<h1>Hello World</h1>
+				<xsl:call-template name="body"/>
 			</body>
 		</html>
 	</xsl:template>

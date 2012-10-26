@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework;
+namespace Application;
 
 /**
  * Registry for installing custom handlers for URIs.
@@ -11,7 +11,7 @@ class RequestHandlerRegistry {
 
 	private function __construct() {
 		//do nothing
-		self::install("Default", "\Framework\RequestHandler\HelloWorld");
+		self::install("Default", "\Application\RequestHandler\HelloWorld");
 	}
 
 	/**

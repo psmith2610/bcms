@@ -2,14 +2,14 @@
 
 //Bootstrap
 chdir("../");
-require 'framework/php/Bootstrap.php';
+require 'application/php/Bootstrap.php';
 
 if (!function_exists("apache_getenv")) {
 	die("This CMS requires Apache");
 }
 
 try {
-	$bootstrap = Framework\Bootstrap::getInstance();
+	$bootstrap = Application\Bootstrap::getInstance();
 	$bootstrap->dispatch();
 }catch(Exception $e) {
 	if (apache_getenv("MODE") == "DEV") {

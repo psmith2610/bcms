@@ -1,14 +1,14 @@
 <?php
 
-namespace Framework;
+namespace Application;
 
-spl_autoload_register('\Framework\classLoader');
+spl_autoload_register('\Application\classLoader');
 
 function classLoader($class_name) {
 	$parts = preg_split('/\\\\/', $class_name);
 
 	if (count($parts) < 2) {
-		throw new \Exception("Class name must have a top level namespace. \"$class_name\" must have a namespace prefix. For example \"\\Framework\\{$class_name}\"");
+		throw new \Exception("Class name must have a top level namespace. \"$class_name\" must have a namespace prefix. For example \"\\Application\\{$class_name}\"");
 	}
 
 	$module = strtolower(array_shift($parts));

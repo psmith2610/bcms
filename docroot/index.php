@@ -9,6 +9,9 @@ if (!function_exists("apache_getenv")) {
 }
 
 try {
+	$registry = Application\RequestHandlerRegistry::getInstance();
+	$registry->install("CMS", "\Application\RequestHandler\CMS");
+
 	$bootstrap = Application\Bootstrap::getInstance();
 	$bootstrap->dispatch();
 }catch(Exception $e) {

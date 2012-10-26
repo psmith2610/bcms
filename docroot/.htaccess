@@ -1,3 +1,3 @@
 RewriteEngine On
 RewriteCond %{REQUEST_URI}	!^/index.php
-RewriteRule ^(.*)$	/index.php?__param=$1 [QSA]
+RewriteRule ^(.*)$	/index.php?__handler=Default [QSA]

@@ -1,3 +1,9 @@
 RewriteEngine On
+
+RewriteRule ^admin$	/admin/auth	[R=301,L]
+RewriteRule ^admin/$	/admin/auth	[R=301,L]
+
+RewriteRule ^admin/(.*)$	/index.php?__handler=Admin [QSA]
+
 RewriteCond %{REQUEST_URI}	!^/index.php
-RewriteRule ^(.*)$	/index.php?__handler=CMS [QSA]
+RewriteRule ^(.*)$	/index.php?__handler=Static [QSA]
